@@ -38,7 +38,7 @@ PKGS=(
     'unrar'                 # RAR compression program
     'unzip'                 # Zip compression program
     'wget'                  # Remote content retrieval
-    'terminator'            # Terminal emulator
+    #'terminator'            # Terminal emulator
     'vim'                   # Terminal Editor
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
@@ -47,22 +47,22 @@ PKGS=(
 
     # DISK UTILITIES ------------------------------------------------------
 
-    'android-tools'         # ADB for Android
-    'android-file-transfer' # Android File Transfer
+    #'android-tools'         # ADB for Android
+    #'android-file-transfer' # Android File Transfer
     'autofs'                # Auto-mounter
     'btrfs-progs'           # BTRFS Support
-    'dosfstools'            # DOS Support
+    #'dosfstools'            # DOS Support
     'exfat-utils'           # Mount exFat drives
     'gparted'               # Disk utility
     'gvfs-mtp'              # Read MTP Connected Systems
     'gvfs-smb'              # More File System Stuff
     'nautilus-share'        # File Sharing in Nautilus
-    'ntfs-3g'               # Open source implementation of NTFS file system
+    #'ntfs-3g'               # Open source implementation of NTFS file system
     'parted'                # Disk utility
     'samba'                 # Samba File Sharing
-    'smartmontools'         # Disk Monitoring
-    'smbclient'             # SMB Connection 
-    'xfsprogs'              # XFS Support
+    #'smartmontools'         # Disk Monitoring
+    #'smbclient'             # SMB Connection 
+    #'xfsprogs'              # XFS Support
 
     # GENERAL UTILITIES ---------------------------------------------------
 
@@ -92,21 +92,21 @@ PKGS=(
 
     # MEDIA ---------------------------------------------------------------
 
-    'kdenlive'              # Movie Render
-    'obs-studio'            # Record your screen
-    'celluloid'             # Video player
+    #'kdenlive'              # Movie Render
+    #'obs-studio'            # Record your screen
+    #'celluloid'             # Video player
     
     # GRAPHICS AND DESIGN -------------------------------------------------
 
-    'gcolor2'               # Colorpicker
-    'gimp'                  # GNU Image Manipulation Program
-    'ristretto'             # Multi image viewer
+    #'gcolor2'               # Colorpicker
+    #'gimp'                  # GNU Image Manipulation Program
+    #'ristretto'             # Multi image viewer
 
     # PRODUCTIVITY --------------------------------------------------------
 
-    'hunspell'              # Spellcheck libraries
-    'hunspell-en'           # English spellcheck library
-    'xpdf'                  # PDF viewer
+    #'hunspell'              # Spellcheck libraries
+    #'hunspell-en'           # English spellcheck library
+    #'xpdf'                  # PDF viewer
 
 )
 

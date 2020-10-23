@@ -11,43 +11,43 @@ echo -e "\nFINAL SETUP AND CONFIGURATION"
 
 # ------------------------------------------------------------------------
 
-echo -e "\nGenaerating .xinitrc file"
+#echo -e "\nGenaerating .xinitrc file"
 
 # Generate the .xinitrc file so we can launch Awesome from the
 # terminal using the "startx" command
-cat <<EOF > ${HOME}/.xinitrc
+#cat <<EOF > ${HOME}/.xinitrc
 #!/bin/bash
 # Disable bell
-xset -b
+#xset -b
 
 # Disable all Power Saving Stuff
-xset -dpms
-xset s off
+#xset -dpms
+#xset s off
 
 # X Root window color
-xsetroot -solid darkgrey
+#xsetroot -solid darkgrey
 
 # Merge resources (optional)
 #xrdb -merge $HOME/.Xresources
 
 # Caps to Ctrl, no caps
-setxkbmap -layout us -option ctrl:nocaps
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
-    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-        [ -x "\$f" ] && . "\$f"
-    done
-    unset f
-fi
+#setxkbmap -layout us -option ctrl:nocaps
+#if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+#    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+#        [ -x "\$f" ] && . "\$f"
+#    done
+#    unset f
+#fi
 
-exit 0
-EOF
+#exit 0
+#EOF
 
 # ------------------------------------------------------------------------
 
-echo -e "\nUpdating /bin/startx to use the correct path"
+#echo -e "\nUpdating /bin/startx to use the correct path"
 
 # By default, startx incorrectly looks for the .serverauth file in our HOME folder.
-sudo sed -i 's|xserverauthfile=\$HOME/.serverauth.\$\$|xserverauthfile=\$XAUTHORITY|g' /bin/startx
+#sudo sed -i 's|xserverauthfile=\$HOME/.serverauth.\$\$|xserverauthfile=\$XAUTHORITY|g' /bin/startx
 
 # ------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ sudo sed -i 's|initramfs-linux.img|initramfs-linux-lts.img|g' /boot/loader/entri
 echo -e "\nConfiguring vconsole.conf to set a larger font for login shell"
 
 sudo cat <<EOF > /etc/vconsole.conf
-KEYMAP=us
+KEYMAP=de
 FONT=ter-v32b
 EOF
 
@@ -96,7 +96,7 @@ sudo sed -i 's|load-module module-esound-protocol-unix|#load-module module-esoun
 
 echo -e "\nEnabling Login Display Manager"
 
-sudo systemctl enable --now lightdm.service
+#sudo systemctl enable --now lightdm.service
 
 # ------------------------------------------------------------------------
 

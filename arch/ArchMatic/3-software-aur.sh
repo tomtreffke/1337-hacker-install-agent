@@ -11,26 +11,26 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 cd "${HOME}"
 
-echo "CLOING: YAY"
-git clone "https://aur.archlinux.org/yay.git"
+#echo "CLOING: YAY"
+#git clone "https://aur.archlinux.org/yay.git"
 
 
 PKGS=(
 
     # UTILITIES -----------------------------------------------------------
 
-    'i3lock-fancy'              # Screen locker
-    'synology-drive'            # Synology Drive
-    'freeoffice'                # Office Alternative
+    #'i3lock-fancy'              # Screen locker
+    #'synology-drive'            # Synology Drive
+    #'freeoffice'                # Office Alternative
     
     # MEDIA ---------------------------------------------------------------
 
-    'screenkey'                 # Screencast your keypresses
-    'lbry-app-bin'              # LBRY Linux Application
+    #'screenkey'                 # Screencast your keypresses
+    #'lbry-app-bin'              # LBRY Linux Application
 
     # COMMUNICATIONS ------------------------------------------------------
 
-    'brave-nightly-bin'         # Brave
+    #'brave-nightly-bin'         # Brave
     
 
     # THEMES --------------------------------------------------------------
@@ -42,11 +42,14 @@ PKGS=(
 )
 
 
-cd ${HOME}/yay
-makepkg -si
+#echo "CLOING: YAY"
+#git clone "https://aur.archlinux.org/yay.git"
 
-for PKG in "${PKGS[@]}"; do
-    yay -S --noconfirm $PKG
-done
+#cd ${HOME}/yay
+#makepkg -si
+
+#for PKG in "${PKGS[@]}"; do
+#    yay -S --noconfirm $PKG
+#done
 
 echo -e "\nDone!\n"
