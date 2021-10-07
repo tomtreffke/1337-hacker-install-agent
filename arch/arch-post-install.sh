@@ -8,7 +8,12 @@ else
     
     clear
     echo "starting software installation - basics"
-    pacman -Syu --noconfirm wget curl git teamviewer zsh oh-my-zsh zsh-theme-powerlevel10k libreoffice dislocker gnome-shell-extensions os-prober openssh npm man-pages yay
+    pacman -Syu --noconfirm \
+        git \
+        zsh-theme-powerlevel10k \
+        gnome-shell-extensions \
+        os-prober \
+        yay
     
     echo "starting software installation - web"
     pacman -Syu --noconfirm chromium firefox 
@@ -25,36 +30,45 @@ else
         packer \
         go \
         go-tools \
-        go-yq-bin \
-        azure-cli \
         kubectl \
         helm \
+        openssh \
+        npm \
+        man-pages \
+        zsh \
+        oh-my-zsh \
+        pamac
 
 
     echo "\n\n +++++++++++++++++++++ \n 
     starting virtualization setup"
-    pacman -Syu --noconfirm libvirt qemu virt-manager
+    pacman -Syu --no-confirm libvirt qemu virt-manager
+
+    echo "dev tools from AUR"
+    pamac build yq2-bin azure-cli --no-confirm
 
     echo "connectivity"
 
+    pamac build teamviewer dislocker --no-confirm
+
     echo "starting software installation - entertainment"
 
-    pacman -Syu --noconfirm spotify
+    pamac build spotify --no-confirm
     
     echo "installing most important piece of software"
-    pacman -Syu --noconfirm cmatrix
+    pamac build cmatrix --no-confirm
 
     echo "AUR packages"
-    pacman -Syu --noconfirm teams
+    pamac build teams --no-confirm
 
 
     echo "loading ZSH config"
-    cp common/.zshrc ~/.zshrc
+    #cp /../common/.zshrc ~/.zshrc
 
 
 
 
 
     # end of script
-    cmatrix   
+    echo "# # # # # # # # # # # # # \n\n FINISH \n\n # # # # # # # # # # # # "
 fi

@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "arch" do |ds|
     ds.vm.hostname = "arch"
-    ds.vm.box = "generic/arch"
+    ds.vm.box = "Zelec/manjarolinux"
     ds.vm.synced_folder "../common/", "/common/"
     ds.vm.network "private_network", ip: "192.168.10.10"  
 
